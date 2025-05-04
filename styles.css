@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF; /* Branco */
+    background-image: url('imagem/IGREJA.png'); /* Caminho para a sua imagem de fundo */
+    background-repeat: no-repeat; /* Para a imagem não se repetir */
+    background-size: contain; /* Para mostrar a imagem inteira no fundo */
+    background-position: center top; /* Centraliza a imagem no topo */
+    background-attachment: fixed; /* Para a imagem ficar fixa durante a rolagem */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Permite que o body ocupe toda a altura da tela */
+}
+
+header {
+    background-color: #2c3e50; /* Azul sólido */
+    color: white; /* Mantenho o texto branco para contraste */
+    padding: 10px 30px; /* Diminuí o padding superior/inferior para 10px */
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.testemunho {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testemunho p {
+    margin: 0;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.testemunho h3 {
+    color: #2c3e50;
+    font-size: 1.3em;
+}
+
+.logo-container {
+    display: flex; /* Alinha o logo e o título na mesma linha em telas maiores */
+    align-items: center; /* Alinha verticalmente */
+    margin-bottom: 10px; /* Espaço entre o logo e o título */
+    flex-direction: column; /* Ajuste inicial para telas menores */
+}
+
+.logo {
+    max-width: 200px; /* Tamanho ajustável do logo */
+    height: auto;
+    margin-right: 50px; /* Espaço entre o logo e o título em telas maiores */
+    margin-bottom: 20px; /* Espaço abaixo do logo em telas menores */
+}
+
+header h1 {
+    font-size: 1.5em; /* Ajuste o tamanho da fonte do título */
+    margin: 0;
+    text-align: center; /* Garante que o título fique centralizado */
+}
+
+nav {
+    text-align: center;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Mantenho a navegação um pouco transparente */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+main {
+    flex: 1; /* Faz com que o conteúdo principal ocupe o restante da tela */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Mantenho o conteúdo principal um pouco transparente */
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 800px; /* Largura máxima do conteúdo */
+    overflow-y: auto; /* Permite a rolagem vertical do conteúdo */
+}
+
+footer {
+    background-color: #2c3e50; /* Azul sólido */
+    color: white; /* Mantenho o texto branco para contraste */
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    position: relative; /* Mudado de fixed para relativo */
+}
+
+/* Media query para telas maiores (ex: tablets e desktops) */
+@media (min-width: 768px) {
+    .logo-container {
+        flex-direction: row; /* Coloca o logo e o título na mesma linha */
+    }
+
+    .logo {
+        margin-bottom: 0; /* Remove a margem inferior em telas maiores */
+    }
+
+    header h1 {
+        text-align: left; /* Alinha o título à esquerda em telas maiores */
+    }
+
+    header {
+        justify-content: flex-start; /* Alinha o conteúdo do cabeçalho à esquerda em telas maiores */
+        padding-left: 10px; /* Adiciona um pouco de espaço à esquerda */
+    }
+}
